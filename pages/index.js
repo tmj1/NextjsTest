@@ -19,6 +19,7 @@ export default function Home() {
         />
       </head>
       <div>
+        <h1>Cards and Title</h1>
         <Hero {...heroProps} />
         {/** Other sections */}
       </div>
