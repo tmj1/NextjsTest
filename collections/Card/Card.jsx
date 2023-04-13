@@ -1,15 +1,27 @@
-// The Card to be exported goes here
+import Image from "next/image";
 import ReactHtmlParser from "react-html-parser";
-export const Card = () => {
+
+import {
+    StyledCardTitle,
+    StyledCardContent,
+    StyledCardContentContainer,
+    StyledCardImageContainer,
+    StyledCardContainer,
+} from "./elements";
+
+export const Card = ({title, content, image, width, color, ...props}) => {
     return (
-        <div className='CardContainer'>
-            <div className='CardImageContainer'>
-                <img className='CardImage' src="#" alt=""/>
-            </div>
-            <div className='CardContentContainer'>
-                <div className='CardTitle'>Title</div>
-                <div className='CardContent'>Content</div>
-            </div>
-        </div>
+        <StyledCardContainer width={width} color={color}>
+            <StyledCardImageContainer>
+                <Image src={image.src} alt="card image" width={image.width} height={image.height} />
+            </StyledCardImageContainer>
+
+            <StyledCardContentContainer>
+                <StyledCardTitle href="#">{title}</StyledCardTitle>
+
+                <StyledCardContent>{ReactHtmlParser(content)}</StyledCardContent>
+            </StyledCardContentContainer>
+        </StyledCardContainer>
     )
+
 }

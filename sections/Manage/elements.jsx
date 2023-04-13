@@ -31,3 +31,16 @@ export const StyledSubtitle = styled((props) => <SectionSubheading {...props} />
     font-size: .85rem;
   }
 `;
+
+export const StyledCardsContainer = styled(({ ...props}) => <div {...props} />)`
+  width: 100%;
+  display: flex;
+  flex-basis: 50%;
+  margin: 1rem 0;
+  align-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    flex-basis: 100%; 
+  }
+`;
