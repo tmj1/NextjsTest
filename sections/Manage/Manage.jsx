@@ -1,13 +1,16 @@
 import Image from "next/image";
 import {
     StyledImageContainer,
+    StyledTitle,
+    StyledSubtitle,
 } from "./elements";
-export const Manage = ({ image, ...props}) => {
+export const Manage = ({ image, title, subtitle, ...props}) => {
     return (
        <div className='Container'>
            <div className='TitleContainer'>
-               <div className='Title'>Page Title</div>
-               <div className='SubTitle'>Page SubTitle</div>
+               <StyledTitle>{title}</StyledTitle>
+
+               <StyledSubtitle>{subtitle}</StyledSubtitle>
            </div>
            <div className='ContentContainer'>
                <StyledImageContainer>

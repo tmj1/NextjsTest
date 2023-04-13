@@ -13,6 +13,8 @@ const manageProps = {
     width: 329,
     height: 525
   },
+  title: "Managed agency selection",
+  subtitle: "Strengthen your onboarding process",
 };
 
 export default function Home() {
