@@ -1,7 +1,12 @@
 import { Hero, Manage } from "../sections";
 
 const heroProps = {
-  image: { src: "/img/video.png", alt: "video file", width: 329, height: 525 },
+  image: {
+    src: "/img/video.png",
+    alt: "",
+    width: 329,
+    height: 525
+  },
   title: "Managed agency selection",
   subtitle: "Strengthen your onboarding process",
 };

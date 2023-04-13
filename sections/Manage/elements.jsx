@@ -1,13 +1,16 @@
 import styled from "styled-components";
-import { SectionBigHeading, SectionSubheading, } from "~/components";
+import { SectionContainer, SectionBigHeading, SectionSubheading, SectionLink } from "~/components";
 
-export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)`
-  flex-basis: 50%;
-  max-width: 328px;
+export const StyledContainer = styled(({ height, ...props }) => <SectionContainer {...props} />)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
-  @media (max-width: 1024px) {
-    margin: 0 auto;
-    flex-basis: 100%;
+export const StyledSectionLink = styled((props) => <SectionLink {...props} />) `
+  &:hover {
+    color: #006EFD;
+    text-decoration: underline;
   }
 `;
 
@@ -29,6 +32,45 @@ export const StyledSubtitle = styled((props) => <SectionSubheading {...props} />
 
   @media (max-width: 768px) {
     font-size: .85rem;
+  }
+`;
+
+export const StyledTitleContainer = styled(({ ...props }) => <div {...props} />)`
+  color: black;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 1rem 0 2.5rem;
+
+  
+  @media (max-width: 1024px) {
+    margin: .8rem 0 1.5rem;      
+  }
+`;
+
+export const StyledContentContainer = styled(({ ...props }) => <div {...props} />)`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0 16rem;
+  background: url(/background.png) no-repeat top left;
+  background-size: contain;
+
+  @media (max-width: 1024px) {
+    padding: 0 .5rem;      
+  }
+
+  @media (max-width: 1440px) {
+    padding: 0 3rem;
+  }
+`;
+
+export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)`
+  flex-basis: 50%;
+  max-width: 328px;
+
+  @media (max-width: 1024px) {
+    margin: 0 auto;
+    flex-basis: 100%;
   }
 `;
 

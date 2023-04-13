@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import { SectionContainer, SectionAnchor, SectionParagraph } from "~/components";
+import { SectionContainer, SectionLink, SectionParagraph } from "~/components";
 
 
-export const StyledCardTitle = styled(({ ...props }) => <SectionAnchor {...props} />)`
+export const StyledCardTitle = styled(({ ...props }) => <SectionLink {...props} />)`
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.6;
