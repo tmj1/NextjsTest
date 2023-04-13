@@ -1,4 +1,4 @@
-import { Hero } from "../sections";
+import { Hero, Manage } from "../sections";
 
 const heroProps = {
   image: { src: "/img/video.png", alt: "video file", width: 329, height: 525 },
@@ -18,8 +18,8 @@ export default function Home() {
         />
       </head>
       <div>
-        <h1>Cards and Title</h1>
         <Hero {...heroProps} />
+        <Manage/>
         {/** Other sections */}
       </div>
     </>
