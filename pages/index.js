@@ -6,6 +6,15 @@ const heroProps = {
   subtitle: "Strengthen your onboarding process",
 };
 
+const manageProps = {
+  image: {
+    src: "/img/video.png",
+    alt: "",
+    width: 329,
+    height: 525
+  },
+};
+
 export default function Home() {
   return (
     <>
@@ -19,7 +28,7 @@ export default function Home() {
       </head>
       <div>
         <Hero {...heroProps} />
-        <Manage/>
+        <Manage { ...manageProps } />
         {/** Other sections */}
       </div>
     </>
