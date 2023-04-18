@@ -10,8 +10,9 @@ import {
     StyledImageContainer,
 } from "./elements";
 
-export const Manage = ({ image, title, subtitle, card1, card2, card3, ...props }) => {
+export const Manage = ({ image, title, subtitle, cards, ...props }) => {
     return (
+
         <StyledContainer {...props}>
             <StyledTitleContainer>
                 <StyledTitle>{title}</StyledTitle>
@@ -25,9 +26,16 @@ export const Manage = ({ image, title, subtitle, card1, card2, card3, ...props }
                 </StyledImageContainer>
 
                 <StyledCardsContainer {...props}>
-                    <Card {...card1} />
-                    <Card {...card2} />
-                    <Card {...card3} />
+                    { cards.map((i) => (
+                        <Card
+                            key={i.id}
+                            image={i.image}
+                            title={i.title}
+                            content={i.content}
+                            width={i.width}
+                            color={i.color}
+                        />
+                    ))}
                 </StyledCardsContainer>
             </StyledContentContainer>
         </StyledContainer>

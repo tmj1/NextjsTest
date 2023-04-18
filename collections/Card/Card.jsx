@@ -9,7 +9,7 @@ import {
     StyledCardContainer,
 } from "./elements";
 
-export const Card = ({title, content, image, width, color, ...props}) => {
+export const Card = ({id, title, content, image, width, color, ...props}) => {
     return (
         <StyledCardContainer width={width} color={color}>
             <StyledCardImageContainer>
