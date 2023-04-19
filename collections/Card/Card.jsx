@@ -17,8 +17,7 @@ export const Card = ({id, title, content, image, width, color, ...props}) => {
 
             <StyledCardContentContainer>
                 <StyledCardTitle href="#">{title}</StyledCardTitle>
-
-                <StyledCardContent>dangerouslySetInnerHTML={{ __html:content }}</StyledCardContent>
+                <StyledCardContent>{content}</StyledCardContent>
             </StyledCardContentContainer>
         </StyledCardContainer>
     )
