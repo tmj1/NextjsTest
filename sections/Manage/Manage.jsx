@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/dist/client/image";
 import { Card } from "../../collections";
 import { StyledCardsContainer } from "./elements";
 import {
